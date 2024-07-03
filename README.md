@@ -1,3 +1,2 @@
 # paginainicial
  EcoBag
-Teste
