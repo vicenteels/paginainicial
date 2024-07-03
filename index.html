@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início Ecobag</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBbyVau8e9Yi-hRe5et4Sw0qwvPh9NUb6s",
+          authDomain: "ecobag-fe056.firebaseapp.com",
+          projectId: "ecobag-fe056",
+          storageBucket: "ecobag-fe056.appspot.com",
+          messagingSenderId: "907006356989",
+          appId: "1:907006356989:web:e57cfec8d3b53636efbd94",
+          measurementId: "G-XYL6Y3JVTV"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </head>
 
 <body>
