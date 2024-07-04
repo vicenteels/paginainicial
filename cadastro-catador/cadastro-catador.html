@@ -6,6 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cadastro-catador.css">
     <title>Cadastro Catador</title>
+    <script>
+
+        // script.js
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Configuração do Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBbyVau8e9Yi-hRe5et4Sw0qwvPh9NUb6s",
+  authDomain: "ecobag-fe056.firebaseapp.com",
+  projectId: "ecobag-fe056",
+};
+
+// Inicializar o Firebase
+const app = initializeApp(firebaseConfig);
+
+// Obter a referência do banco de dados
+const db = getFirestore(app);
+
+// Obter a coleção de usuários
+const usersCollection = collection(db, 'users');
+
+// Adicionar evento de clique ao botão "Continuar"
+document.querySelector('.botao-continuar').addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // Coletar os dados do usuário
+  const nomeCompleto = document.querySelector('input[name="nomeCompleto"]').value;
+  const nomeUsuario = document.querySelector('input[name="nomeUsuario"]').value;
+  const senha = document.querySelector('input[name="senha"]').value;
+  const confirmarSenha = document.querySelector('input[name="confirmarSenha"]').value;
+  const estacaoColeta = document.querySelector('input[name="estacaoColeta"]').value;
+
+  // Verificar se as senhas são iguais
+  if (senha !== confirmarSenha) {
+    alert('Senhas não conferem');
+    return;
+  }
+
+  // Criar um novo usuário
+  const user = {
+    nomeCompleto,
+    nomeUsuario,
+    senha,
+    estacaoColeta,
+  };
+
+  // Adicionar o usuário à coleção de usuários
+  addDoc(usersCollection, user)
+    .then((docRef) => {
+      console.log(`Usuário cadastrado com sucesso! ID: ${docRef.id}`);
+      // Redirecionar para a página de sucesso
+      window.location.href = '/pagina-de-sucesso';
+    })
+    .catch((error) => {
+      console.error('Erro ao cadastrar usuário:', error);
+    });
+});
+
+    </script>
 </head>
 <body>
     <div class="boxcadastro">
