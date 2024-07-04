@@ -45,6 +45,7 @@ body{
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .cad-texto{
@@ -87,12 +88,7 @@ body{
     box-shadow: #2CE392 0 0 10px 0;
 }
 
-.botao-escolher:active{
-    border: 2px solid #2CE392;
-    box-shadow: #2CE392 0 0 10px 0;
-}
-
-.botao-escolher a{
+.botao-escolher{
     color: black;
     text-decoration: none;
     font-size: 20px;
@@ -125,5 +121,13 @@ body{
 .botao-continuar:active{
     letter-spacing: 2px;
     transform: translateY(-10px);
-    transition: 100ms
+    transition: 100ms;
+}
+
+.voltar-login{
+    padding-top: 20px;
+}
+
+.voltar-login span a{
+    color: black;
 }
