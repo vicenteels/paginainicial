@@ -17,12 +17,12 @@
               </div>
       
               <div class="inputs">
-                <span>EMAIL</span>
+                <span id="email">EMAIL</span>
                 <input type="text" />
               </div>
       
               <div class="inputs">
-                <span>SENHA</span>
+                <span id="senha">SENHA</span>
                 <input type="password" />
               </div>
       
@@ -59,7 +59,7 @@
         </div>
       
     </div>
-    <a href="" class="botao-continuar"><button id="button-continuar">Continuar</button></a>
+    <a href="" class="botao-continuar"><button id="button-continuar">Cadastrar</button></a>
     <div class="voltar-login">
       <span
         >Já possui uma conta?
@@ -67,4 +67,25 @@
       >
     </div>
   </body>
+  <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBj53tTol5vOy2EoyCDYIzMBuIYUtOs93Y",
+      authDomain: "ecobag-af6f3.firebaseapp.com",
+      projectId: "ecobag-af6f3",
+      storageBucket: "ecobag-af6f3.appspot.com",
+      messagingSenderId: "76657489483",
+      appId: "1:76657489483:web:d8f051621c13e9e29abfce"
+    };
+    firebase.initialize(firebaseConfig);
+
+    console.log('antes')
+    firebase.auth().sigInWithEmailAndPassword("any@email.com", "123456").then(response => {
+      console.log('success', response)
+    }).catch(error => {
+      console.log('error', response)
+    });
+    console.log("depois")
+  </script>
 </html>
