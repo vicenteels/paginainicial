@@ -50,26 +50,14 @@ body{
 
 .boxcadastro{
     height: 80%;
-    width: 30%;
+    width: 25%;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    border-radius: 20px 0 0 20px;
-}
-
-.box-endereco{
-    height: 80%;
-    width: 30%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px;
 }
 
 .texto-titulo{
@@ -116,7 +104,7 @@ body{
     text-decoration: none;
 }
 
-.botao-continuar button{
+.button{
     width: 300px;
     height: 50px;
     border-radius: 30px;
@@ -131,13 +119,14 @@ body{
     color: white;
     font-size: 20px;
     border: 2px solid green;
+    margin-top: -30px;
 }
 
-.botao-continuar button:hover{
+.button:hover{
     background-color: rgb(230, 230, 230);
     color:green;
     border: 2px solid green;
-
+    cursor: pointer;
 }
 
 .voltar-login{

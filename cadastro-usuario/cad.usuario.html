@@ -17,47 +17,21 @@
               </div>
               
               <div class="inputs">
-                <span id="email">EMAIL</span>
-                <input type="text" />
+                <span id="email" >EMAIL</span>
+                <input type="text" placeholder="E-mail"/>
               </div>
       
               <div class="inputs">
-                <span id="senha">SENHA</span>
-                <input type="password" />
+                <span id="senha" >SENHA</span>
+                <input type="password" placeholder="Senha" minlength="6"/>
               </div>
       
               <div class="inputs">
-                <span>CONFIRMAR SENHA</span>
-                <input type="password" />
+                <span >CONFIRMAR SENHA</span>
+                <input type="password" placeholder="Repita a senha" minlength="6"/>
               </div>
             </div>
         </div>
-      
-        <div class="box-endereco">
-            <div class="texto-titulo">Endereço</div>
-            <div class="inputs-box">
-              <div class="inputs">
-                <span>CIDADE</span>
-                <input type="text" />
-              </div>
-      
-              <div class="inputs">
-                <span>BAIRRO </span>
-                <input type="text" />
-              </div>
-      
-              <div class="inputs">
-                <span>RUA</span>
-                <input type="text" />
-              </div>
-      
-              <div class="inputs">
-                <span>NUMERO</span>
-                <input type="number"/>
-              </div>
-            </div>
-        </div>
-      
     </div>
     <button id="submit" class="button">Cadastrar</button>
     <div class="voltar-login">
@@ -67,66 +41,55 @@
       </span>
     </div>
   </body>
-  <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-auth-compat.js"></script>
-  <script>
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-            
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-              apiKey: "AIzaSyBj53tTol5vOy2EoyCDYIzMBuIYUtOs93Y",
-              authDomain: "ecobag-af6f3.firebaseapp.com",
-              projectId: "ecobag-af6f3",
-              storageBucket: "ecobag-af6f3.appspot.com",
-              messagingSenderId: "76657489483",
-              appId: "1:76657489483:web:d8f051621c13e9e29abfce"
-            };
-            firebase.initialize(firebaseConfig);
-            
-            
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const auth = getAuth(app);
-            
-            //submit button
-            
-            const submit = document.getElementById("submit");
-            
-            submit.addEventListener("click", function (event) {
-              event.preventDefault();
-              const email = document.getElementById("email").value;
-              const senha = document.getElementById("senha").value;
-             
-           
-            
-              createUserWithEmailAndPassword(auth, email, senha)
-                .then((userCredential) => {
-                  // Signed in
-                  alert("Creating account...");
-                  window.location.href = "login.html";
-                  const user = userCredential.user;
-                  // ...
-                })
-                .catch((error) => {
-                  const errorCode = error.code;
-                  const errorMessage = error.message;
-                  alert("deu certo");
-                  // ..
-                });
-                console('antes');
-                firebase.auth().signInWithEmailAndPassword("any@email.com", "123456").then(response => {
-                    console.log('sucess', response)
-                }).catch(error => {
-                    console.log('error', error)
-            
-                });
-                console.log('depois')
-              
-            });
-              
-        </script>
+  <script src="../../firebase-init.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBj53tTol5vOy2EoyCDYIzMBuIYUtOs93Y",
+      authDomain: "ecobag-af6f3.firebaseapp.com",
+      projectId: "ecobag-af6f3",
+      storageBucket: "ecobag-af6f3.appspot.com",
+      messagingSenderId: "76657489483",
+      appId: "1:76657489483:web:d8f051621c13e9e29abfce"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    //submit button
+
+    const submit = document.getElementById("submit");
+
+    submit.addEventListener("click", function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      createUserWithEmailAndPassword(auth, email, senha)
+      .then((userCredential) => {
+      // Signed in
+        alert("Creating account...");
+        window.location.href = "login.html";
+        const user = userCredential.user;
+      // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("error");
+      // ..
+    });
+  
+  });
   </script>
-
 </html>
-
