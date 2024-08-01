@@ -31,7 +31,13 @@
                 <input type="password" placeholder="Repita a senha" minlength="6"/>
               </div>
             </div>
-        </div>
+            <p>Como deseja se cadastrar: 
+              <input type="radio" name="radsex" id="usu" checked> <!-- O checked já deixa uma bolinha marcado, obrigando a pessoa e selecionar uma ou outra-->
+              <label for="mas">Quero descartar</label> <!-- Pra aparecer o nome lá na hora de marcar-->
+              <input type="radio" name="radsex" id="cat">
+              <label for="fem">Sou catador</label> <!-- Não se usa chacked porque só se usa ele uma vez-->
+            </p>
+        </div>  
     </div>
     <button id="submit" class="button">Cadastrar</button>
     <div class="voltar-login">
