@@ -36,7 +36,7 @@ body{
     }
 }
 
-.container{
+form{
     background-color: white;
     width: 38%;
     height: 100%;
@@ -126,3 +126,11 @@ body{
     border: 2px solid green;
 }
 
+.recuperar-senha{
+    background-color: transparent;
+    border: solid 2px white;
+}
+
+.recuperar-senha:hover{
+    cursor: pointer;
+}
