@@ -18,19 +18,39 @@
             <input type="text" placeholder="Seu nome" id="email"> <!--Por meio de um botao tipo submit da pra jogar esse nome na tela-->
 
             <span>EMAIL</span>
-            <input type="text" placeholder="exemplo123@email.com" id="email">
+            <input type="text" placeholder="exemplo123@email.com" id="email" onchange="validateFields()">
 
             <span>SENHA</span>
-            <input type="password" placeholder="Sua senha" id="senha">
+            <input type="password" placeholder="Sua senha" id="senha" disabled="true">
 
-            <button type="button" class="recuperar-senha">Recuperar Senha</button>
+            <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button">Recuperar Senha</button>
         </div>
 
         <div class="container-botao">
-            <a href="" class="entrar">Entrar</a> 
-            <a href="../cadastro/index.html">Cadastre-se</a>
+            <button type="button">Entrar</button>
+            <button type="button">Cadastre-se</button>
+            <!-- <a href="" class="entrar">Entrar</a> 
+            <a href="../cadastro/index.html">Cadastre-se</a> -->
         </div>
     </form>
     
 </body>
+
+<script>
+    function validateFields(){
+        const email = document.getElementById("email").value
+        if (!email){ //verifica se é vazio
+            document.getElementById("recover-password-button").disabled = true;
+        }else if (validateEmail(email)){
+            document.getElementById("recover-password-button").disabled = false;
+        }else{
+            document.getElementById("recover-password-button").disabled = true;
+        }
+    }
+
+    function validateEmail(email){
+        return /\S+@\S+\.\S+/.test(email);
+    }
+</script>
+
 </html>

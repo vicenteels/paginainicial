@@ -104,7 +104,7 @@ form{
     padding-bottom: 20px;
 }
 
-.container-botao a{
+.container-botao button{ /*AJEITAR ESTILIZAÇÃO*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -120,7 +120,7 @@ form{
     transition: all .3s ease;
 }
 
-.container-botao a:hover{
+.container-botao button:hover{
     background-color: rgb(230, 230, 230); 
     color: green;
     border: 2px solid green;
@@ -133,4 +133,8 @@ form{
 
 .recuperar-senha:hover{
     cursor: pointer;
+}
+
+button[disabled]{
+    opacity: 0.8;
 }
