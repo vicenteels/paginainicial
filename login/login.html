@@ -18,10 +18,13 @@
             <input type="text" placeholder="Seu nome" id="nome"> <!--Por meio de um botao tipo submit da pra jogar esse nome na tela-->
 
             <span>EMAIL</span>
-            <input type="email" name="email" placeholder="exemplo123@email.com" id="email" onchange="validateFields()">
+            <input type="email" name="email" placeholder="exemplo123@email.com" id="email" onchange="onChangeEmail()">
+            <div class="error" id="email-required-error">Email obrigatório</div>
+            <div class="error" id="email-invalid-error">O email é inválido</div>
 
             <span>SENHA</span>
-            <input type="password" placeholder="Sua senha" id="password" onchange="validateFields()">
+            <input type="password" placeholder="Sua senha" id="password" onchange="onChangePassword()">
+            <div class="error" id="password-riquired-error">Senha obrigatória</div>
 
             <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button" disabled="true">Recuperar Senha</button>
         </div>
@@ -37,5 +40,6 @@
 </body>
 
 <script src="./js/index.js"></script>
+
 
 </html>
