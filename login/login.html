@@ -15,20 +15,20 @@
 
         <div class="inputs">
             <span>NOME DE USUÁRIO</span>
-            <input type="text" placeholder="Seu nome" id="email"> <!--Por meio de um botao tipo submit da pra jogar esse nome na tela-->
+            <input type="text" placeholder="Seu nome" id="nome"> <!--Por meio de um botao tipo submit da pra jogar esse nome na tela-->
 
             <span>EMAIL</span>
-            <input type="text" placeholder="exemplo123@email.com" id="email" onchange="validateFields()">
+            <input type="email" name="email" placeholder="exemplo123@email.com" id="email" onchange="validateFields()">
 
             <span>SENHA</span>
-            <input type="password" placeholder="Sua senha" id="senha" disabled="true">
+            <input type="password" placeholder="Sua senha" id="password" onchange="validateFields()">
 
-            <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button">Recuperar Senha</button>
+            <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button" disabled="true">Recuperar Senha</button>
         </div>
 
         <div class="container-botao">
-            <button type="button" disabled="true">Entrar</button> <!--ver se ta correto esse disable-->
-            <button type="button" disabled="true">Cadastre-se</button>
+            <button type="button" id="login-button" disabled="true">Entrar</button> <!--ver se ta correto esse disable-->
+            <button type="button">Cadastre-se</button>
             <!-- <a href="" class="entrar">Entrar</a> 
             <a href="../cadastro/cadastro.html">Cadastre-se</a> -->
         </div>
@@ -36,21 +36,6 @@
     
 </body>
 
-<script>
-    function validateFields(){
-        const email = document.getElementById("email").value
-        if (!email){ //verifica se é vazio
-            document.getElementById("recover-password-button").disabled = true;
-        }else if (validateEmail(email)){
-            document.getElementById("recover-password-button").disabled = false;
-        }else{
-            document.getElementById("recover-password-button").disabled = true;
-        }
-    }
-
-    function validateEmail(email){
-        return /\S+@\S+\.\S+/.test(email);
-    }
-</script>
+<script src="./js/index.js"></script>
 
 </html>
