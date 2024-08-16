@@ -19,12 +19,12 @@
 
             <span>EMAIL</span>
             <input type="email" name="email" placeholder="exemplo123@email.com" id="email" onchange="onChangeEmail()">
-            <div class="error" id="email-required-error">Email obrigatório</div>
-            <div class="error" id="email-invalid-error">O email é inválido</div>
+            <div class="error" id="email-required-error">Email obrigatório</div> <!--quizer da pra estilizar a distância que os avisos aparecem da margem esquerda-->
+            <div class="error" id="email-invalid-error">O email é inválido</div> <!--Já tem um elemento de estilização pra eles no final do css-->
 
             <span>SENHA</span>
             <input type="password" placeholder="Sua senha" id="password" onchange="onChangePassword()">
-            <div class="error" id="password-riquired-error">Senha obrigatória</div>
+            <div class="error" id="password-required-error">Senha obrigatória</div><!--Mesma estilização dos de cima equivale para esse-->
 
             <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button" disabled="true">Recuperar Senha</button>
         </div>
@@ -40,6 +40,7 @@
 </body>
 
 <script src="./js/index.js"></script>
+<script src="../validations.js"></script>
 
 
 </html>
