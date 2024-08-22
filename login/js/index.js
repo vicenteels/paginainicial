@@ -8,6 +8,12 @@ function onChangePassword(){
     toggleButtonsDisable();
 }
 
+function login(){
+    window.location.href = "../home/home.html"
+    console.log("### window", window);
+    console.log("### window location", window.location);
+}
+
 function isEmailValid(){
     const email = form.email().value;
     if (!email){
