@@ -143,3 +143,17 @@ button[disabled]{
     color: salmon;
     display: none;
 }
+
+.loading{
+    background-color: rgba(0,0,0,0.7);
+    width: 38%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading label{
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -26,21 +26,19 @@
             <input type="password" placeholder="Sua senha" id="password" onchange="onChangePassword()">
             <div class="error" id="password-required-error">Senha obrigatória</div><!--Mesma estilização dos de cima equivale para esse-->
 
-            <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button" disabled="true">Recuperar Senha</button>
+            <button type="button" class="recuperar-senha" disabled="true" id="recover-password-button" onclick="recoverPassword()" disabled="true">Recuperar Senha</button>
         </div>
 
         <div class="container-botao">
             <button type="button" id="login-button" disabled="true" onclick="login()">Entrar</button> <!--ver se ta correto esse disable-->
             <button type="button" onclick="register()">Cadastre-se</button>
-            <!-- <a href="" class="entrar">Entrar</a> 
-            <a href="../cadastro/cadastro.html">Cadastre-se</a> -->
         </div>
     </form>
-    
 </body>
 
 <script src="./js/index.js"></script>
 <script src="../validations.js"></script>
+<script src="../loading.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js";></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js";></script>
 <script>

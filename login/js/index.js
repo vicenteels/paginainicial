@@ -9,11 +9,14 @@ function onChangePassword(){
 }
 
 function login(){
+    showLoading();
     firebase.auth().signInWithEmailAndPassword(
         form.email().value, form.password().value
     ).then(response => {
+        hideLoading();
         window.location.href = "../home/home.html"
     }).catch(error =>{
+        hideLoading();
         alert(getErrorMessage(error));
     });
 }
@@ -26,9 +29,19 @@ function getErrorMessage(error){
 }
 
 function register(){
+    showLoading();
     window.location.href = "../cadastro/cadastro.html"
-    console.log("### window", window);
-    console.log("### window location", window.location);
+}
+
+function recoverPassword(){
+    //showLoading();
+    firebase.auth.sendPasswordResetEmail(form.email().value).then(() => {
+        //hideLoading();
+        alert('Email enviado, verifique sua caixa de entrada!')
+    }).catch(error => {
+        //hideLoading();
+        alert(getErrorMessage(error));
+    });
 }
 
 function isEmailValid(){
@@ -62,7 +75,7 @@ function togglePasswordErrors(){
 
 function toggleButtonsDisable(){
     const emailValid = isEmailValid();
-    form.recoverPassword().disabled = !emailValid;
+    form.recoverPasswordButton().disabled = !emailValid;
 
     const passwordValid = isPasswordValid();
     form.loginButton().disabled = !emailValid || !passwordValid; //botao entrar fica desabilitado se o email não for valido ou se a senha não for valida
@@ -82,6 +95,6 @@ const form = {
     emailRequiredError: () => document.getElementById('email-required-error'),
     password: () => document.getElementById('password'),
     loginButton: () => document.getElementById('login-button'),
-    recoverPassword: () => document.getElementById('recover-password-button'),
+    recoverPasswordButton: () => document.getElementById('recover-password-button'),
     passwordRequiredError: () => document.getElementById('password-required-error')
 }
