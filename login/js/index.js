@@ -33,13 +33,13 @@ function register(){
     window.location.href = "../cadastro/cadastro.html"
 }
 
-function recoverPassword(){
-    //showLoading();
-    firebase.auth.sendPasswordResetEmail(form.email().value).then(() => {
-        //hideLoading();
+function recoverPassword(){ //não está validando certo. está enviando email para qualquer um independente de estar cadastrado ou não
+    showLoading();
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+        hideLoading();
         alert('Email enviado, verifique sua caixa de entrada!')
     }).catch(error => {
-        //hideLoading();
+        hideLoading();
         alert(getErrorMessage(error));
     });
 }
@@ -67,8 +67,8 @@ function toggleEmailErrors(){
 }
 
 function togglePasswordErrors(){
-    const password = form.password().value;
-    form.passwordRequiredError().style.display = password ? "none" : "block";
+     const password = form.password().value;
+     form.passwordRequiredError().style.display = password ? "none" : "block";
     //mesma coisa do de cima, se o campo password tiver valor ele não mostra o erro
     //se não tiver nada escrito mostra o erro
 }
@@ -76,7 +76,6 @@ function togglePasswordErrors(){
 function toggleButtonsDisable(){
     const emailValid = isEmailValid();
     form.recoverPasswordButton().disabled = !emailValid;
-
     const passwordValid = isPasswordValid();
     form.loginButton().disabled = !emailValid || !passwordValid; //botao entrar fica desabilitado se o email não for valido ou se a senha não for valida
 }
