@@ -23,7 +23,7 @@ function login(){
 
 function getErrorMessage(error){
     if (error.code == "auth/invalid-credential"){
-        return "Usuário não encontrado"
+        return "Email ou senha incorretos"
     }
     return error.message;
 }
@@ -33,11 +33,11 @@ function register(){
     window.location.href = "../cadastro/cadastro.html"
 }
 
-function recoverPassword(){ //não está validando certo. está enviando email para qualquer um independente de estar cadastrado ou não
+function recoverPassword(){ //tem q ser desse jeito, firebase não deixa mais verificar se o usuário está cadastrado ou não
     showLoading();
     firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
         hideLoading();
-        alert('Email enviado, verifique sua caixa de entrada!')
+        alert('Email enviado, verifique sua caixa de entrada! Se não tiver recebido, o email informado está incorreto.')
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));
