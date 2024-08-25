@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/cad.usuario.css" />
+    <link rel="stylesheet" href='../login/css/login.css'>
     <title>Cadastro</title>
   </head>
   <body>
@@ -12,23 +13,30 @@
             <div class="texto-titulo">Cadastre-se</div>
             <div class="inputs-box">
               <div class="inputs">
-                <span>NOME COMPLETO</span>
-                <input type="text" />
+                <span>NOME</span>
+                <input type="text" id="nome" placeholder="Seu nome" onchange="onChangeName()"/>
+                <div class="error" id="name-min-length-error">O nome deve ter no mínimo 3 caracteres</div>
+                <div class="error" id="name-required-error">Nome obrigatório</div>
               </div>
               
               <div class="inputs">
-                <span id="email" >EMAIL</span>
-                <input type="text" placeholder="E-mail"/>
+                <span>EMAIL</span>
+                <input type="text" placeholder="seu@email.com" id="email" onchange="onChangeEmail()"/>
+                <div class="error" id="email-required-error">Email obrigatório</div> <!--quizer da pra estilizar a distância que os avisos aparecem da margem esquerda-->
+                <div class="error" id="email-invalid-error">O email é inválido</div>
               </div>
       
               <div class="inputs">
-                <span id="senha" >SENHA</span>
-                <input type="password" placeholder="Senha" minlength="6"/>
+                <span>SENHA</span>
+                <input type="password" placeholder="Senha" id="senha" onchange="onChangePassword(); onChangeConfirmPassword()" on/>
+                <div class="error" id="password-required-error">Senha obrigatória</div> <!--quizer da pra estilizar a distância que os avisos aparecem da margem esquerda-->
+                <div class="error" id="password-min-length-error">A senha deve ter no mínimo 6 caracteres</div>
               </div>
       
               <div class="inputs">
-                <span >CONFIRMAR SENHA</span>
-                <input type="password" placeholder="Repita a senha" minlength="6"/>
+                <span>CONFIRMAR SENHA</span>
+                <input type="password" placeholder="Repita a senha" id="confirmPassword" onchange="onChangeConfirmPassword()"/>
+                <div class="error" id="password-doesnt-match-error">Senha e Confirmar Senha devem ser iguais</div>
               </div>
             </div>
             <p>Como deseja se cadastrar: 
@@ -39,7 +47,7 @@
             </p>
         </div>  
     </div>
-    <button id="submit" class="button">Cadastrar</button>
+    <button id="register-button" class="button" disabled="true" onclick="register()">Cadastrar</button>
     <div class="voltar-login">
       <span>
         Já possui uma conta?
@@ -47,55 +55,12 @@
       </span>
     </div>
   </body>
-  <script src="../../firebase-init.js"></script>
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import {
-      getAuth,
-      createUserWithEmailAndPassword,
-    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyBj53tTol5vOy2EoyCDYIzMBuIYUtOs93Y",
-      authDomain: "ecobag-af6f3.firebaseapp.com",
-      projectId: "ecobag-af6f3",
-      storageBucket: "ecobag-af6f3.appspot.com",
-      messagingSenderId: "76657489483",
-      appId: "1:76657489483:web:d8f051621c13e9e29abfce"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    //submit button
-
-    const submit = document.getElementById("submit");
-
-    submit.addEventListener("click", function (event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const senha = document.getElementById("senha").value;
-
-      createUserWithEmailAndPassword(auth, email, senha)
-      .then((userCredential) => {
-      // Signed in
-        alert("Creating account...");
-        window.location.href = "login.html";
-        const user = userCredential.user;
-      // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert("error");
-      // ..
-    });
-  
-  });
-  </script>
+  <!-- <script src="./js/cadastro.js"></script> -->
+  <script src="./js/cadastro.js"></script>
+  <script src="../validations.js"></script>
+  <script src="../loading.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js";></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js";></script>
+  <script src="../firebase-init.js"></script>
 </html>

@@ -136,3 +136,11 @@ body{
 .voltar-login a{
     color:black;
 }
+
+.error{
+    color: salmon;
+}
+
+button[disabled]{
+    opacity: 0.7;
+}
