@@ -1,3 +1,12 @@
+function keepUser(){
+    firebase.auth().onAuthStateChange(user =>{ //usuario vai ser nulo se não tiver logado, se tiver logado vai ter valor
+        if (user){
+            window.location.href = "../home/home.html";
+        }
+    })
+}
+
+
 function onChangeEmail(){
     toggleButtonsDisable();
     toggleEmailErrors();
