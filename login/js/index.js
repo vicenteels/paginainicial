@@ -32,7 +32,7 @@ function login(){
 
 function getErrorMessage(error){
     if (error.code == "auth/invalid-credential"){
-        return "Email ou senha incorretos"
+        return "Email ou senha incorretos. Verifique se está fazendo login no lado correto da aplicação. Você tentou realizar login como: USUÁRIO QUE DESEJA DESCARTAR."
     }
     return error.message;
 }
