@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    --espaço-margem: 60px 120px;
+    --cor-de-fundo: #3AD5DF, #2CE392, #44D7E4;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(to right, #3AD5DF,
+            #2CE392, #44D7E4);
+    background-size: 400%, 400%;
+    animation: animate-background 10s infinite ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxcadastro {
+    height: 80%;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 20px;
+}
+
+.texto-titulo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.texto-titulo h1 {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.texto-titulo span {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: grey;
+}
+
+.buttons {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /*background-color: #8fd0b3;*/
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a {
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bolder;
+    box-shadow: #0000000d 0 0 8px;
+    transition: all .3s ease;
+    color: green;
+    font-size: 20px;
+    border: 2px solid green;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.button a:hover {
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    cursor: pointer;
+}
