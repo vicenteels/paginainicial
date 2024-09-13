@@ -1,21 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
+    <link rel="stylesheet" href="./css/home.css">
 </head>
+
 <body>
     <header>
-        <button type="button" onclick="logout()">Sair</button> <!--Deixar alinhado a direita-->
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Informações</a></li>
+                <li><a href="">Parceiros</a></li>
+                <li><a href="">Dicas</a></li>
+                <li><button class="botao-sair" type="button" onclick="logout()">Sair</button></li>
+                <li><button class="botao-perfil" type="button">Perfil</button></li>
+            </ul>
+        </nav>
     </header>
-    <h1>HOME</h1>
+
+    <main>
+        <section class="section1">
+            <div class="section1-text">
+                <h1>Meus prêmios</h1>
+                <p>No EcoBag, você pode descartar materiais recicláveis de forma simples e prática, ganhando pontos que
+                    podem ser trocados por prêmios. Junte-se a nós para um futuro mais sustentável e aproveite as
+                    recompensas por suas boas ações!</p>
+
+                <button type="button">Ver prêmios</button>
+            </div>
+
+            <div class="section1-icon">
+
+            </div>
+
+        </section>
+
+        <section class="section2"></section>
+
+        <section class="section3">
+            <h2>Empresas Parceiras</h1>
+        </section>
+
+        <div class="curve"></div>
+
+        <section class="section4">
+            <h2>Dicas de Reuso</h2>
+            <div class="carousel">
+                <div class="card">
+                    <img src="../img/recycle-bin_5543488.png" alt="ícone card">
+                    <div class="card-text">
+                        <h3>Garrafas como vasos de plantas</h3>
+                        <p>Você pode fazer das garrafas de vidro (cervejas ou vinhos), vasos para plantas naturais
+                            ou
+                            artificiais para decorar seu quarto ou sala.</p>
+                    </div>
+                </div>
+
+                <div class="nav-bullets">
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
 </body>
 
 <script src="./js/home.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js";></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js";></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js" ;></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js" ;></script>
 <script src="../firebase-init.js"></script>
 
 </html>

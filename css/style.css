@@ -10,28 +10,29 @@
     --cor-de-fundo: #3AD5DF, #2CE392, #44D7E4;
 }
 
-body{
-    background: linear-gradient(
-        to right, #3AD5DF,
-        #2CE392, #44D7E4);
+body {
+    background: linear-gradient(to right, #3AD5DF,
+            #2CE392, #44D7E4);
     background-size: 400%, 400%;
     animation: animate-background 10s infinite ease-in-out;
 }
 
-@keyframes animate-background{
-    0%{
+@keyframes animate-background {
+    0% {
         background-position: 0 50%;
     }
-    50%{
+
+    50% {
         background-position: 100% 50%;
     }
-    100%{
+
+    100% {
         background-position: 0 50%;
     }
 }
 
 
-header{
+header {
     padding: var(--espaço-margem);
     display: flex;
     justify-content: space-between;
@@ -40,36 +41,37 @@ header{
     padding-bottom: 20px;
 }
 
-.logoeco{
+.logoeco {
     height: 154px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     gap: 25px;
 }
 
-nav ul li button{
+nav ul li button {
     text-decoration: none;
     font-weight: bold;
-    color:#3AD5DF;
+    color: #3AD5DF;
 }
 
-nav ul li button{
+nav ul li button {
     background-color: white;
-    color:#3AD5DF;
+    color: #3AD5DF;
     border-radius: 20px;
     border: solid 2px white;
     padding: 12px 20px 12px 20px;
 }
 
-nav ul li button:hover{
+nav ul li button:hover {
     background-color: #2CE392;
     color: white;
 }
 
-.main{
+.main {
+
     display: flex;
     gap: 50px;
     padding: var(--espaço-margem);
@@ -77,20 +79,20 @@ nav ul li button:hover{
     padding-bottom: 0;
 }
 
-.main-col1{
+.main-col1 {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-col2 h1{
+.main-col2 h1 {
     width: 100%;
     color: white;
     font-size: 60px;
 }
 
-.main h1#amarelo{
+.main h1#amarelo {
     color: rgb(255, 255, 84);
     text-decoration-line: underline;
     font-style: italic;
@@ -101,44 +103,47 @@ nav ul li button:hover{
     animation: animate 6s linear infinite;
 }
 
-@keyframes animate{
-    0%, 10%, 100%
-    {
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
         width: 0;
     }
-    70%, 90%
-    {
+
+    70%,
+    90% {
         width: 100%;
     }
 }
 
-.main-col2 h1#tit_topo{
+.main-col2 h1#tit_topo {
     width: 100%;
     padding-top: 30px;
 }
 
-.main-col2 p{
-    color:white;
+.main-col2 p {
+    color: white;
     font-weight: bold;
     font-size: 23.5px;
     padding-top: 15px;
     padding-bottom: 8px;
 }
 
-.secao1{
+.secao1 {
     background-color: white;
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: right;
     align-items: center;
 }
 
-hr{
+hr {
     background-color: rgb(221, 221, 221);
     height: 5px;
 }
 
-.secao1 ul{
+.secao1 ul {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -146,14 +151,14 @@ hr{
     padding-left: 60px;
 }
 
-.secao1 ul li{
+.secao1 ul li {
     display: flex;
     justify-content: left;
     align-items: center;
     padding-right: 120px;
 }
 
-.secao1 ul li a{
+.secao1 ul li a {
     text-align: center;
     color: gray;
 }
