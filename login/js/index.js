@@ -39,7 +39,7 @@ function getErrorMessage(error){
 
 function register(){
     showLoading();
-    window.location.href = "../cadastro/cadastro.html"
+    window.location.href = "../cadastro/cadastroselect.html"
 }
 
 function recoverPassword(){ //tem q ser desse jeito, firebase não deixa mais verificar se o usuário está cadastrado ou não

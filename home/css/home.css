@@ -58,6 +58,7 @@ nav ul li a:hover {
 
 .botao-sair:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .botao-perfil {
