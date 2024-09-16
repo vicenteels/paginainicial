@@ -60,6 +60,17 @@ body {
     justify-content: center;
     gap: 50px;
     border-radius: 20px;
+    padding-bottom: 50px;
+}
+
+.voltar {
+    height: 10%;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.voltar img {
+    height: 90%;
 }
 
 .texto-titulo {

@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+        /* Começa fora da tela */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Termina na posição original */
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -20,6 +34,7 @@ nav {
     justify-content: flex-end;
 }
 
+
 nav ul {
     height: 80px;
     background-color: white;
@@ -32,6 +47,13 @@ nav ul {
     margin-top: 20px;
     margin-right: 40px;
     box-shadow: 0px 0px 93px -16px rgba(0, 0, 0, 0.33);
+    z-index: 1000;
+    transition: transform 1.0s ease;
+}
+
+.navbar.hide {
+    transform: translateY(-130%);
+    /* Ajuste este valor conforme a altura do seu navbar */
 }
 
 nav ul li {
@@ -48,6 +70,7 @@ nav ul li a:hover {
     color: var(--verde);
     font-weight: 600;
 }
+
 
 .botao-sair {
     color: var(--verde);
@@ -95,6 +118,13 @@ nav ul li a:hover {
     gap: 30px;
 }
 
+.animation1 {
+    position: relative;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 2s ease forwards;
+}
+
 .section1-text h1 {
     font-size: 45px;
     color: var(--verde);
@@ -132,21 +162,107 @@ nav ul li a:hover {
 }
 
 .section2 {
-    height: 700px;
+    height: 1000px;
     background-color: #ffecf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+
 }
 
+.section2-parte1 {
+    height: 30%;
+    width: 100%;
+}
+
+.section2-box1 {
+    background-color: var(--azul_escuro);
+    height: 100%;
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 50px;
+
+}
+
+.section2-box1 h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.section2-box1 p {
+    color: white;
+    font-size: 18px;
+    width: 70%;
+}
+
+.section2-parte2 {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.section2-box2 {
+    background-color: var(--azul_escuro);
+    height: 100%;
+    width: 50%;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    padding-right: 70px;
+}
+
+.section2-box2 h2 {
+    text-align: right;
+    color: white;
+    font-size: 30px;
+}
+
+.section2-box2 p {
+    text-align: right;
+    color: white;
+    font-size: 18px;
+    width: 70%;
+}
+
+
 .section3 {
-    height: 300px;
+    height: 350px;
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 10px;
     align-items: center;
 }
 
 .section3 h2 {
     font-size: 35px;
 }
+
+.box-empresas {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center
+}
+
+.empresa {
+    height: 50%;
+    width: 10%;
+    background-color: #ffecf0;
+}
+
 
 .curve {
     background-color: white;
@@ -158,7 +274,7 @@ nav ul li a:hover {
 
 .section4 {
     background-color: var(--verde);
-    height: 400px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -171,13 +287,13 @@ nav ul li a:hover {
 }
 
 .carousel {
-    height: 60%;
+    height: 45%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .card {
@@ -207,4 +323,17 @@ nav ul li a:hover {
 
 .card-text p {
     font-size: 15px;
+}
+
+footer {
+    background-color: var(--azul_escuro);
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    padding-bottom: 20px;
 }

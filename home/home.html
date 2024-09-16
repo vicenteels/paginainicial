@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
+    <title>Home Usuário</title>
     <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
+            <ul id="navbar" class="navbar">
                 <li><a href="">Home</a></li>
                 <li><a href="">Informações</a></li>
                 <li><a href="">Parceiros</a></li>
@@ -22,27 +22,54 @@
         </nav>
     </header>
 
-    <main>
+    <main class="content">
         <section class="section1">
             <div class="section1-text">
-                <h1>Meus prêmios</h1>
-                <p>No EcoBag, você pode descartar materiais recicláveis de forma simples e prática, ganhando pontos que
+                <h1 class="animation1">Meus prêmios</h1>
+                <p class="animation1">No EcoBag, você pode descartar materiais recicláveis de forma simples e prática,
+                    ganhando pontos que
                     podem ser trocados por prêmios. Junte-se a nós para um futuro mais sustentável e aproveite as
                     recompensas por suas boas ações!</p>
 
-                <button type="button">Ver prêmios</button>
+                <button class="animation1" type="button">Ver prêmios</button>
             </div>
 
-            <div class="section1-icon">
+            <div class="section1-icon"></div>
 
+        </section>
+
+        <section class="section2">
+            <div class="section2-parte1">
+                <div class="section2-box1">
+                    <h2>Infromações de Descarte</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet perferendis iusto voluptatibus
+                        quis
+                        laborum quisquam incidunt, iure, aut sapiente enim quos. Cumque iste expedita eligendi voluptate
+                        nostrum modi nam aspernatur?</p>
+                </div>
+            </div>
+
+            <div class="section2-parte2">
+                <div class="section2-box2" id="section2-box2">
+                    <h2>Infromações de Descarte</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet perferendis iusto voluptatibus
+                        quis
+                        laborum quisquam incidunt, iure, aut sapiente enim quos. Cumque iste expedita eligendi voluptate
+                        nostrum modi nam aspernatur?</p>
+                </div>
             </div>
 
         </section>
 
-        <section class="section2"></section>
-
         <section class="section3">
-            <h2>Empresas Parceiras</h1>
+            <h2>Empresas Parceiras</h2>
+            <div class="box-empresas">
+                <div class="empresa"></div>
+                <div class="empresa"></div>
+                <div class="empresa"></div>
+                <div class="empresa"></div>
+            </div>
+
         </section>
 
         <div class="curve"></div>
@@ -68,6 +95,10 @@
             </div>
 
         </section>
+
+        <footer>
+            <p>&copy; 2024 Ecobag. Todos os direitos reservados.</p>
+        </footer>
 
     </main>
 </body>
