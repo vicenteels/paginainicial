@@ -64,15 +64,15 @@ body {
 
 .boxcadastro a {
     justify-content: left;
-    height: 5%;
+    height: 10%;
     width: 100%;
     padding-left: 50px;
 }
 
 .boxcadastro a img {
+    padding-top: 25px;
     height: 100%;
 }
-
 
 .texto-titulo {
     width: 100%;
@@ -82,6 +82,7 @@ body {
 }
 
 .inputs-separados {
+    height: 50%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -90,6 +91,8 @@ body {
 
 
 .inputs-box {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,6 +108,7 @@ body {
     gap: 5px;
     height: 50%;
     width: 100%;
+    padding-left: 70px;
 }
 
 .inputs span {
@@ -114,7 +118,7 @@ body {
 }
 
 .inputs input {
-    width: 100%;
+    width: 80%;
     height: 50px;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 30px;
@@ -172,6 +176,7 @@ body {
 }
 
 .voltar-login a {
+    padding-left: 0;
     font-size: 15px;
     color: black;
 }
