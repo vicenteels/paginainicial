@@ -14,6 +14,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -122,7 +126,7 @@ nav ul li a:hover {
     position: relative;
     opacity: 0;
     transform: translateX(100%);
-    animation: slideIn 2s ease forwards;
+    animation: slideIn 3s ease forwards;
 }
 
 .section1-text h1 {
@@ -156,7 +160,7 @@ nav ul li a:hover {
 }
 
 .section1-icon {
-    padding-top: 30px;
+    padding-top: 40px;
     width: 55%;
     height: 100%;
     background-color: var(--rosa);
@@ -164,10 +168,11 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .section1-icon img {
-    height: 60%;
+    height: 65%;
 }
 
 .section1-icon-button {
@@ -188,6 +193,11 @@ nav ul li a:hover {
     border: none;
     border-radius: 30px;
     padding: 0 20px 0 20px;
+}
+
+.section1-icon button:hover {
+    border: 2px solid var(--azul_escuro);
+    font-weight: 600;
 }
 
 .section2 {
