@@ -156,9 +156,38 @@ nav ul li a:hover {
 }
 
 .section1-icon {
+    padding-top: 30px;
     width: 55%;
     height: 100%;
     background-color: var(--rosa);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1-icon img {
+    height: 60%;
+}
+
+.section1-icon-button {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.section1-icon button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0 20px 0 20px;
 }
 
 .section2 {
