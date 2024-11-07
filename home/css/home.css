@@ -202,7 +202,7 @@ nav ul li a:hover {
 
 .section2 {
     height: 1000px;
-    background-color: #ffecf0;
+    background-color: #f9f1e6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,7 +216,7 @@ nav ul li a:hover {
 }
 
 .section2-box1 {
-    background-color: var(--azul_escuro);
+    background-color: #febfcc;
     height: 100%;
     width: 50%;
     border-radius: 0 25px 25px 0;
@@ -229,14 +229,15 @@ nav ul li a:hover {
 }
 
 .section2-box1 h2 {
-    color: white;
-    font-size: 30px;
+    color: var(--azul_escuro);
+    font-size: 25px;
 }
 
 .section2-box1 p {
-    color: white;
+    color: black;
     font-size: 18px;
-    width: 70%;
+    width: 90%;
+    text-align: left;
 }
 
 .section2-parte2 {
@@ -247,31 +248,71 @@ nav ul li a:hover {
 }
 
 .section2-box2 {
-    background-color: var(--azul_escuro);
+    background-color: #007050;
     height: 100%;
     width: 50%;
     border-radius: 25px 0 0 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 20px;
     padding-right: 70px;
+    padding-left: 40px;
 }
 
 .section2-box2 h2 {
-    text-align: right;
+    text-align: left;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-.section2-box2 p {
-    text-align: right;
-    color: white;
-    font-size: 18px;
-    width: 70%;
+.box-materiais {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
+.box-materiais img {
+    height: 80%;
+}
+
+.section2-parte3 {
+    height: 30%;
+    width: 100%;
+}
+
+.section2-box3 {
+    background-color: #febfcc;
+    height: 100%;
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+.section2-box3-parte1 {
+    height: 100%;
+    width: 50%;
+}
+
+.section2-box3-parte1 h2 {
+    font-size: 25px;
+}
+
+.section2-box3-parte1 .section2-box3-parte2 {
+    height: 100%;
+    width: 50%;
+
+}
+
+.section2-box3 h2 {
+    font-size: 25px;
+}
 
 .section3 {
     height: 350px;
