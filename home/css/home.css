@@ -172,32 +172,172 @@ nav ul li a:hover {
 }
 
 .section1-icon img {
+    transform: rotate(-15deg);
     height: 65%;
 }
 
-.section1-icon-button {
-    height: 8%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 100px;
-}
-
-.section1-icon button {
-    display: flex;
-    align-items: center;
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 20%;
+    left: 1%;
+    z-index: 999;
     justify-content: center;
-    gap: 10px;
-    height: 100%;
-    background-color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 0 20px 0 20px;
+    display: none;
 }
 
-.section1-icon button:hover {
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.923);
+    border-radius: 10px;
+    width: 40%;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 0 40px 0;
+}
+
+.modal h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.modal-titulo {
+    width: 80%;
+    padding-left: 10px;
+}
+
+.premio-box {
+    height: 40px;
+    width: 80%;
+    display: flex;
+}
+
+.premio-box-icon {
+    height: 100%;
+    width: 8%;
+    background-color: #ccc14f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+#marrom {
+    background-color: #6b3e0a;
+}
+
+#verde-escuro {
+    background-color: #32620e;
+}
+
+#verde-claro {
+    background-color: #9dcd5a;
+}
+
+.premio-box-icon img {
+    height: 60%;
+}
+
+.premio-box-desc {
+    height: 100%;
+    width: 68%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.premio-box-botao {
+    height: 100%;
+    width: 28%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao-meta {
+    all: unset;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #90ee90;
+}
+
+#botao-meta:hover {
+    background-color: rgba(255, 255, 255, 0.838);
+    border: 2px solid black;
+}
+
+.premio-box-botao img {
+    height: 20px;
+}
+
+.btns {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#botao-modal {
+    all: unset;
+    width: 20%;
+    height: 35px;
+    background-color: #012241;
+    border-radius: 25px;
+    color: white;
+}
+
+#botao-modal:hover {
+    background-color: white;
     border: 2px solid var(--azul_escuro);
-    font-weight: 600;
+    color: var(--azul_escuro);
+    font-weight: bold;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        padding: 10px;
+        width: 80%;
+    }
+
+    span,
+    .btns button {
+        font-size: smaller;
+    }
 }
 
 .section2 {
@@ -206,7 +346,8 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 60px;
+    padding: 50px 0 50px 0;
 
 }
 
@@ -235,9 +376,9 @@ nav ul li a:hover {
 
 .section2-box1 p {
     color: black;
-    font-size: 18px;
-    width: 90%;
-    text-align: left;
+    font-size: 16px;
+    width: 80%;
+    text-align: justify;
 }
 
 .section2-parte2 {
@@ -296,18 +437,64 @@ nav ul li a:hover {
 }
 
 .section2-box3-parte1 {
-    height: 100%;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 40px;
 }
 
 .section2-box3-parte1 h2 {
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.horarios-botao {
+    display: flex;
+    height: 20%;
+    width: 80%;
+    background-color: #01c2c1;
+    border-radius: 10px;
+}
+
+.icone-calendario {
+    background-color: #53d4d4;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.icone-calendario img {
+    height: 60%;
+}
+
+.link-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.link-botao a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 .section2-box3-parte1 .section2-box3-parte2 {
     height: 100%;
     width: 50%;
+}
 
+.section2-box3-parte2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2-box3-parte2 img {
+    height: 80%;
 }
 
 .section2-box3 h2 {

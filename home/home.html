@@ -31,14 +31,63 @@
                     podem ser trocados por prêmios. Junte-se a nós para um futuro mais sustentável e aproveite as
                     recompensas por suas boas ações!</p>
 
-                <button class="animation1" type="button">Ver prêmios</button>
+                <button class="animation1" onclick="openModal()">Ver Prêmios</button>
+
+                <div class="modal-container">
+                    <div class="modal">
+                        <div class="modal-titulo">
+                            <h2>Prêmios Disponíveis</h2>
+                        </div>
+                        <div class="premio-box">
+                            <div class="premio-box-icon" id="amarelo"><img src="../img/icons8-presente-50.png" alt="">
+                            </div>
+                            <div class="premio-box-desc">Cápsulas 3 Corações</div>
+                            <div class="premio-box-botao"><button id="botao-meta"><img src="../img/mais.png"
+                                        alt="">Adicionar meta</button></div>
+                        </div>
+
+                        <div class="premio-box">
+                            <div class="premio-box-icon" id="marrom"><img src="../img/icons8-presente-50.png" alt="">
+                            </div>
+                            <div class="premio-box-desc">Desconto 20% YouCom</div>
+                            <div class="premio-box-botao"><button id="botao-meta"><img src="../img/mais.png"
+                                        alt="">Adicionar meta</button></div>
+                        </div>
+
+                        <div class="premio-box">
+                            <div class="premio-box-icon" id="verde-escuro"><img src="../img/icons8-presente-50.png"
+                                    alt=""></div>
+                            <div class="premio-box-desc">Desconto 5% Fisk</div>
+                            <div class="premio-box-botao"><button id="botao-meta"><img src="../img/mais.png"
+                                        alt="">Adicionar meta</button></div>
+                        </div>
+
+                        <div class="premio-box">
+                            <div class="premio-box-icon" id="verde-claro"><img src="../img/icons8-presente-50.png"
+                                    alt=""></div>
+                            <div class="premio-box-desc">Vale R$10 Shein</div>
+                            <div class="premio-box-botao"><button id="botao-meta"><img src="../img/mais.png"
+                                        alt="">Adicionar meta</button></div>
+                        </div>
+
+                        <div class="premio-box">
+                            <div class="premio-box-icon" id="marrom"><img src="../img/icons8-presente-50.png" alt="">
+                            </div>
+                            <div class="premio-box-desc">Vale R$10 Shein</div>
+                            <div class="premio-box-botao"><button id="botao-meta"><img src="../img/mais.png"
+                                        alt="">Adicionar meta</button></div>
+                        </div>
+
+                        <div class="btns">
+                            <button class="btnOK" id="botao-modal" onclick="closeModal()">Ok</button>
+                            <button class="btnClose" id="botao-modal" onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="section1-icon">
                 <img src="../img/caixa-de-presente.png" alt="">
-                <div class="section1-icon-button">
-                    <button><img src="../img/mais.png" alt="">Adicionar Metas</button>
-                </div>
             </div>
 
         </section>
@@ -71,11 +120,14 @@
             <div class="section2-parte3">
                 <div class="section2-box3" id="section2-box3">
                     <div class="section2-box3-parte1">
-                        <h2>Horários e dias da coleta seletiva</h2>
-                        <div class="horarios-botao"><a href="">Clique para ver</a></div>
+                        <h2>Horários da coleta seletiva</h2>
+                        <div class="horarios-botao">
+                            <div class="icone-calendario"><img src="../img/icons8-calendário-50.png" alt=""></div>
+                            <div class="link-botao"><a href="">Clique para ver</a></div>
+                        </div>
                     </div>
                     <div class="section2-box3-parte2">
-                        <img src="" alt="">
+                        <img src="../img/calendario_quadro3.png" alt="">
                     </div>
                 </div>
             </div>
