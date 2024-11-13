@@ -62,6 +62,10 @@ header {
     height: 154px;
 }
 
+.logoeco img {
+    height: 80%;
+}
+
 nav ul {
     display: flex;
     list-style: none;
