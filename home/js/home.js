@@ -6,6 +6,10 @@ function logout() {
     })
 }
 
+function perfil(){
+    window.location.href = "../perfil/perfil-usuario.html"
+}
+
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
 
