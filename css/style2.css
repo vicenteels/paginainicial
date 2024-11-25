@@ -14,8 +14,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #febfcc,
-            #f9f1e6, #febfcc);
+    background: linear-gradient(to right, #2CE392, #44D7E4, #90ee90);
     background-size: 400%, 400%;
     animation: animate-background 10s infinite ease-in-out;
 }
@@ -89,12 +88,6 @@ nav ul li button {
     padding: 12px 20px 12px 20px;
 }
 
-nav ul li button:hover {
-    background-color: #febfcc;
-    color: var(--azul_escuro);
-    border: 2px solid var(--azul_escuro);
-}
-
 .main {
     height: 55%;
     display: flex;
@@ -124,7 +117,7 @@ nav ul li button:hover {
 
 .main-col2 h1 {
     width: 100%;
-    color: var(--verde);
+    color: white;
     font-size: 60px;
 }
 
@@ -145,7 +138,7 @@ nav ul li button:hover {
 }
 
 .main-col2 p {
-    color: var(--verde);
+    color: white;
     font-weight: bold;
     font-size: 23.5px;
     padding-top: 15px;

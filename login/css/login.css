@@ -38,6 +38,12 @@ body {
     }
 }
 
+section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
 form {
     background-color: white;
     width: 38%;
@@ -162,4 +168,16 @@ button[disabled] {
 .loading label {
     font-size: 30px;
     font-weight: bold;
+}
+
+.logo {
+    height: 100%;
+    width: 62%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 55%;
 }
