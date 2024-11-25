@@ -17,4 +17,40 @@ html {
 
 body {
     background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav ul {
+    width: 40%;
+}
+
+main {
+    height: 100%;
+}
+
+section {
+    height: 100%;
+    display: flex;
+}
+
+.esquerda {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita {
+    height: 100%;
+    width: 50%;
+    background-color: #febfcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita img {
+    height: 50%;
 }
